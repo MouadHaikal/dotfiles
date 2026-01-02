@@ -1,0 +1,89 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "width": 1000,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": " ",
+            "default": " "
+        }
+    },
+    "clock": {
+        "interval": 60,
+        "tooltip": true,
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%d-%m-%Y}",
+    },
+    "network": {
+        "format": "{icon}",
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format-wifi": "{essid}",
+        "tooltip-format-ethernet": "Ethernet",
+        "tooltip-format-disconnected": "Offline",
+        "interval": 5
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "tooltip-format": "Volume",
+        "scroll-step": 0.5
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "Backlight"
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-charging": "󰉁",
+        "format-plugged": "󰚤 ",
+        "format-full": "󰂅 ",
+        "format-icons": [
+            "󰂎",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip-format": "{capacity}%",
+        "tooltip-format-charging": "{capacity}% - Charging",
+        "tooltip-format-plugged": "{capacity}% - Plugged In",
+        "tooltip-format-full": "{capacity}% - Full",
+        "interval": 30,
+        "events": {
+            "on-discharging-warning": "notify-send 'Battery Low (20%)' -u critical -i 'battery-020' -r 1525",
+            "on-discharging-critical": "notify-send 'Battery Critical (10%)' -u critical -i 'battery-010' -r 1525",
+            "on-charging-100": "notify-send 'Battery Full (100%)' -i 'battery-100-charged'"
+        }
+    }
+}
