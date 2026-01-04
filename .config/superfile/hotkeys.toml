@@ -36,7 +36,7 @@ toggle_reverse_sort = ['R', '']
 
 #-- Focus Manipulation
 focus_on_metadata = ['m', '']
-focus_on_process_bar = ['p', '']
+focus_on_process_bar = ['P', '']
 focus_on_sidebar = ['s', '']
 
 #-- File/Dir Creation/Renaming

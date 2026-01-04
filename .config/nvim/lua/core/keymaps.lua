@@ -23,6 +23,9 @@ map("n", "<Esc>", "<Cmd>nohlsearch<CR><Esc>", { desc = "Clear search highlight" 
 
 map("n", "<leader>x", "<Cmd>bdelete<CR>", { desc = "Close buffer" })
 
+vim.keymap.del("n", "<C-w>d")
+map("n", "gl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
 map("n", "<Tab>", "<Cmd>BufferLineCycleNext<Cr>", { desc = "Next buffer" })
 map("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<Cr>", { desc = "Previous buffer" })
 map("n", "<A-Tab>", "<Cmd>BufferLineMoveNext<Cr>", { desc = "Move buffer right" })
