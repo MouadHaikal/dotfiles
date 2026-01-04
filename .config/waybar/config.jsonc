@@ -26,7 +26,7 @@
         "interval": 60,
         "tooltip": true,
         "format": "{:%H:%M}",
-        "tooltip-format": "{:%d-%m-%Y}",
+        "tooltip-format": "{:%d-%m-%Y}"
     },
     "network": {
         "format": "{icon}",
@@ -39,8 +39,19 @@
         "interval": 5
     },
     "pulseaudio": {
-        "format": "{volume}%",
-        "tooltip-format": "Volume",
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "{volume}%",
         "scroll-step": 0.5
     },
     "backlight": {
@@ -56,34 +67,50 @@
             "",
             ""
         ],
-        "tooltip-format": "Backlight"
+        "tooltip-format": "{percent}%"
     },
     "battery": {
         "format": "{icon}",
-        "format-charging": "󰉁",
-        "format-plugged": "󰚤 ",
-        "format-full": "󰂅 ",
-        "format-icons": [
-            "󰂎",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ],
+        "format-charging": "{icon}",
+        "format-full": "󰂄",
+        "format-icons": {
+            "discharging": [
+                "󰂎",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ],
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ]
+        },
         "tooltip-format": "{capacity}%",
         "tooltip-format-charging": "{capacity}% - Charging",
-        "tooltip-format-plugged": "{capacity}% - Plugged In",
-        "tooltip-format-full": "{capacity}% - Full",
+        "tooltip-format-full": "Full",
         "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
         "events": {
-            "on-discharging-warning": "notify-send 'Battery Low (20%)' -u critical -i 'battery-020' -r 1525",
-            "on-discharging-critical": "notify-send 'Battery Critical (10%)' -u critical -i 'battery-010' -r 1525",
-            "on-charging-100": "notify-send 'Battery Full (100%)' -i 'battery-100-charged'"
+            "on-discharging-warning": "notify-send 'Battery Low (30%)'",
+            "on-discharging-critical": "notify-send 'Battery Critical (15%)' -u critical",
+            "on-charging-100": "notify-send 'Battery Full (100%)'"
         }
     }
 }

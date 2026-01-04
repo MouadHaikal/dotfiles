@@ -46,22 +46,21 @@ tooltip label {
 
 /* ===== Network ===== */
 #network {
-    margin: 0 13px;
+    margin: 0 18px;
 }
 
 /* ===== Volume ===== */
 #pulseaudio {
-    margin: 0 5px;
-    min-width: 40px;
+    margin: 0 21px;
 }
 
 /* ===== Backlight ===== */
 #backlight {
-    margin: 0 15px;
+    margin: 0 18px;
 }
 
 
 /* ===== Battery ===== */
 #battery {
-    margin: 0 15px;
+    margin: 0 18px;
 }
