@@ -1,5 +1,7 @@
 # dotfiles
 
+<br/>
+
 <div align="center">
     <table>
         <tr>
@@ -46,4 +48,3 @@
         </tr>
     </table>
 </div>
-<br/>
